@@ -25,16 +25,35 @@ var ties = 0;
 document.onkeyup = function(event) {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-	// This picks a random word from the library. 
+// this logs key pressed to the console
+	// var guessBox = console.log(userGuess);
 
-	var godsLibrary = ["Hermes", "Aphrodite", "Endymion", "Artemis", "Ares", 
-						"Zeus", "Kronos", "Ouranos", "Poseidon", "Hades"];
-	var computerPick = function(){
-		var libraryPick = godsLibrary[Math.floor(Math.random() * godsLibrary.length)];
-		console.log(libraryPick);
+
+// This picks a random word from the library. 
+	var godsLibrary = ["hermes", "aphrodite", "endymion", "artemis", "ares", 
+						"zeus", "kronos", "ouranos", "poseidon", "hades"];
+
+	var libraryPick = godsLibrary[Math.floor(Math.random() * godsLibrary.length)];
+
+	console.log(libraryPick);
+
+	var computerPick = libraryPick; 
+
+	// This is printing blanks out for the amount of letters
+	var computerBlank = libraryPick;
+	for(var i = 0; i < computerBlank.length; i++){
+		console.log("_" + " ");
 	};
 
-	computerPick();
+// This is comparing the letter to the character in the string picked from "computerPick"
+	var letterCompare = computerPick;
+	for(var i = 0; i < letterCompare.length; i++){
+		if(userGuess == letterCompare.charAt(i)){
+			console.log(letterCompare.charAt(i));
+		}else{
+			console.log("NO");
+			};
+	};
 
 
 	/*************************************************
