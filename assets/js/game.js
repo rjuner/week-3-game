@@ -1,7 +1,8 @@
 // GLOBAL VARIABLES
 // =============================================================================
 
-var godsLibrary = ["hermes", "aphrodite", "endymion", "artemis", "ares","zeus", "kronos", "ouranos", "poseidon", "hades"];
+var godsLibrary = ["apollo", "hermes", "aphrodite", "endymion", "artemis", "ares","zeus", "kronos", "ouranos", "poseidon", "hades"];
+
 
 // Win counter 
 var wins = 0;
@@ -73,7 +74,7 @@ document.onkeyup = function(event)
 		wins++;
 		resetAll();
 	}	
-
+	
 	// This is printing out which string was picked
 	var computerPick = randomPick; 
 
