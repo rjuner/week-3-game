@@ -5,7 +5,6 @@ var godsLibrary = ["mercury", "hermes", "venus", "aphrodite", "mars", "ares", "j
 
 var music = {mercury:'assets/music/merc.mp3', venus:'assets/music/ven.mp3', mars:'assets/music/mar.mp3', jupiter:'assets/music/jup.mp3', saturn:'assets/music/sat.mp3', uranus:'assets/music/ura.mp3', neptune:'assets/music/nep.mp3' }
 
-
 // Win counter 
 var wins = 0;
 
@@ -65,6 +64,8 @@ document.onkeyup = function(event)
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	console.log("user clicked: " + userGuess);
 	checkLetters(lettersBox, userGuess);
+
+
 
 	if(randomPick == godsLibrary[0] || randomPick == godsLibrary[1]){
 		var audio = new Audio(music.mercury);
@@ -140,8 +141,6 @@ document.onkeyup = function(event)
 
 	var winView = "Wins: " + wins; 
 	document.querySelector('#winView').innerHTML = winView;
-
-
 
 };
 
