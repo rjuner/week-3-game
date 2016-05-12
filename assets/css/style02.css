@@ -1,0 +1,75 @@
+body{
+	background-color: #1e0043;
+	font-family: 'Orbitron', sans-serif;
+}
+
+h1{
+	font-size: 100px;
+}
+
+p{
+	text-align: center;
+}
+
+#topbar{
+	background-image: url("../images/starsbg.gif");
+	height: 400px;
+	padding-top: 250px;
+}
+
+#game{
+	padding: 100px;
+	text-align: center;
+	font-size: 50px;
+}
+
+.panel-default{
+	text-align: center;
+	margin: 0 0 0 25px;
+	width: 50%;
+	background-color: red;
+	opacity: 1.0;
+	border-style: none;
+}
+
+#gameName{
+	color: #ffffff;
+	text-align: center;
+	padding: 50px;
+}
+
+#gamecontainer{
+	color: #ffffff;
+	background-color: #2f0a52;
+	height: 300px;
+	border-radius:5px;
+	padding: 20px;
+	margin: 20px;
+}
+
+#letterGuessed{
+	color: white;
+	text-align: left;
+	padding: 15px 20px 10px 10px;
+}
+
+#youGuessed{
+	color: white;
+	text-align: left;
+	padding: 15px 20px 10px 10px;
+}
+
+#winView{
+	color: white;
+	text-align: left;
+	padding: 15px 20px 10px 10px;
+}
+
+#hint{
+	color: red;
+	text-align: left;
+	padding: 15px 20px 10px 10px;
+	opacity: .5;
+}
+
+

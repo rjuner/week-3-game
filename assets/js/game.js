@@ -1,7 +1,9 @@
 // GLOBAL VARIABLES
 // =============================================================================
 
-var godsLibrary = ["apollo", "hermes", "aphrodite", "endymion", "artemis", "ares","zeus", "kronos", "ouranos", "poseidon", "hades"];
+var godsLibrary = ["mercury", "hermes", "venus", "aphrodite", "mars", "ares", "jupiter", "zeus", "saturn", "kronos", "uranus", "ouranos", "neptune", "poseidon"];
+
+var music = {mercury:'assets/music/merc.mp3', venus:'assets/music/ven.mp3', mars:'assets/music/mar.mp3', jupiter:'assets/music/jup.mp3', saturn:'assets/music/sat.mp3', uranus:'assets/music/ura.mp3', neptune:'assets/music/nep.mp3' }
 
 
 // Win counter 
@@ -64,6 +66,42 @@ document.onkeyup = function(event)
 	console.log("user clicked: " + userGuess);
 	checkLetters(lettersBox, userGuess);
 
+	if(randomPick == godsLibrary[0] || randomPick == godsLibrary[1]){
+		var audio = new Audio(music.mercury);
+		audio.play();
+	}
+
+	if(randomPick == godsLibrary[2] || randomPick == godsLibrary[3]){
+		var audio = new Audio(music.venus);
+		audio.play();
+	}
+
+	if(randomPick == godsLibrary[4] || randomPick == godsLibrary[5]){
+		var audio = new Audio(music.mars);
+		audio.play();
+	}
+
+	if(randomPick == godsLibrary[6] || randomPick == godsLibrary[7]){
+		var audio = new Audio(music.jupiter);
+		audio.play();
+	}
+
+	if(randomPick == godsLibrary[8] || randomPick == godsLibrary[9]){
+		var audio = new Audio(music.saturn);
+		audio.play();
+	}
+
+	if(randomPick == godsLibrary[10] || randomPick == godsLibrary[11]){
+		var audio = new Audio(music.uranus);
+		audio.play();
+	}
+
+	if(randomPick == godsLibrary[12] || randomPick == godsLibrary[13]){
+		var audio = new Audio(music.neptune);
+		audio.play();
+	}
+
+
 	if(lettersBox.length == 12){
 		alert("You lose! Sorry!");
 		resetAll();
@@ -90,11 +128,21 @@ document.onkeyup = function(event)
 	};
 
 	// SHOULD BE LAST!! Below adds pertinent info based on user input to game area
-	var html = /* letterCompare */ "<br>Current Word:" + emptyWord +
-				"<br> you pressed: " + userGuess +  
-				"<br> Letters Guessed: " + lettersBox + 
-				"<br>Wins: " + wins; 
+	var html = emptyWord
+				
 	document.querySelector('#game').innerHTML = html;
+
+	var test = "Letters Guessed: " + lettersBox;
+	document.querySelector('#letterGuessed').innerHTML = test;
+
+	var youGuessed = "You pressed: " + userGuess;
+	document.querySelector('#youGuessed').innerHTML = youGuessed;
+
+	var winView = "Wins: " + wins; 
+	document.querySelector('#winView').innerHTML = winView;
+
+
+
 };
 
 // TESTING/DEBUGGING
